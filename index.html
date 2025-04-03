@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Manipulation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #4b3f72;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
+            color: #4b3f72;
+        }
+
+        button {
+            background-color: #4b3f72;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #3a2f58;
+        }
+
+        .highlight {
+            background-color: #ffd166;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        .counter-display {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .todo-container {
+            margin-top: 15px;
+        }
+
+        .todo-item {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .todo-item button {
+            background-color: #e74c3c;
+            padding: 5px 10px;
+        }
+
+        #colorPreview {
+            width: 100%;
+            height: 50px;
+            margin: 10px 0;
+            border-radius: 4px;
+            background-color: #4b3f72;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript DOM Manipulation</h1>
+        <p>Learn how to dynamically modify webpage content using JavaScript</p>
+    </header>
+
+    <main>
+        <section id="text-modification">
+            <h2>Text Modification</h2>
+            <p id="dynamic-text">This text will be changed when you click the button below.</p>
+            <button id="change-text-btn">Change Text</button>
+        </section>
+
+        <section id="style-modification">
+            <h2>Style Modification</h2>
+            <div id="colorPreview"></div>
+            <label for="color-input">Change the color:</label>
+            <input type="text" id="color-input" placeholder="Enter a color name or hex code">
+            <button id="apply-color-btn">Apply Color</button>
+            <button id="toggle-highlight-btn">Toggle Highlight</button>
+        </section>
+
+        <section id="element-manipulation">
+            <h2>Element Manipulation</h2>
+            <div class="counter-container">
+                <p>Counter: <span id="counter" class="counter-display">0</span></p>
+                <button id="increment-btn">Increment</button>
+                <button id="decrement-btn">Decrement</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+        </section>
+
+        <section id="add-remove-elements">
+            <h2>Add/Remove Elements</h2>
+            <input type="text" id="todo-input" placeholder="Enter a new task">
+            <button id="add-todo-btn">Add Task</button>
+            <div id="todo-list" class="todo-container">
+                <!-- Tasks will be added here dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created for learning JavaScript DOM Manipulation</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
